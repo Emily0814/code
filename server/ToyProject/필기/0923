@@ -1,0 +1,124 @@
+EL, Expression Language
+- ex23_el.jsp
+- JSP(자바)의 표현식(<%= %>) > HTML 문서에 값을 출력하는 역할
+- JSP 페이지내에서 자바 문법을 사용하지 말자!!
+- <%= %>을 대신하는 언어 > EL (*****) = 가독성 + 편의성
+
+JSTL, Java Standard Tag Library
+- 액션 태그
+- 자바의 프로그래밍 구문을 태그 형태로 제공 
+- JSP 페이지내에서 자바 문법을 사용하지 말자!!
+- <% %>을 대신(X) > <% %> 일부 구문 대신(O)
+- ex24_jstl.jsp
+
+jstl download
+https://mvnrepository.com/artifact/javax.servlet/jstl/1.2
+https://mvnrepository.com/artifact/javax.servlet/jstl
+> 1.2 > Filse > jar > download
+- webapp > WEB-INF > lib > jstl-1.2.jar 복사
+
+application
+- ex25_application.jsp
+
+쿠키, Cookie
+- 브라우저 기능 중 하나 > 데이터 저장소
+- JavaScript or Java로 조작 가능
+- 용도: 사용자(브라우저)가 웹 사이트 방문 > 웹 사이트측에서 접속한 사용자에 대한 개인 정보를 저장하기 위한 장치 > 사용자의 컴퓨터에 저장한다.(***) > 사용자에 대한 여러가지 정보들을 지속적으로 유지/관리 or 행동 추적 등..
+
+
+사이트 > 사용자 정보 관리
+1. DB
+	- 가장 좋음
+	- 무겁고 비싸다.
+=======================
+2. session
+	- 서버 메모리에 생성
+	- 자바 > 저장 가능한 자료형 > Object(모든 것)
+	- 보안 양호	
+	- 크기 무제한(서버 메모리 허용량)
+	- 모든 페이지에서 접근 가능(= 전역 변수 역할)
+
+3. cookie
+	- 클라이언트 메모리 or 하드 디스크에 생성
+	- 텍스트 파일 > 저장 가능한 자료형 > 문자열
+	- 보안 불안정
+	- 4KB, 최대 20개
+	
+	
+- "ex26_cookie.jsp"
+- cookie.js
+https://www.w3schools.com/js/js_cookies.asp
+
+- "ex26_cookie_2.jsp"
+
+> 데이터의 성질을 정확하게 알고 있어야 한다.
+
+- "ex27_cookie_1.jsp"
+- "ex27_cookie_2.jsp"
+- "ex27_cookie_3.jsp"
+
+- "ex28_cookie_form.jsp"
+- "ex28_cookie_ok.jsp"
+
+
+
+새 프로젝트
+- "MVCTest" > "mvc" + web.xml(O)
+
+1. Servlet
+2. JSP > JSP Model 1
+	- 상단부: 자바코드
+	- 하단부: HTML코드
+	
+3. Servlet + JSP > JSP Model 2
+	- Servlet: 자바코드
+	- JSP: HTML코드
+
+
+Hello
+- "com.test.java" > "Helo.java"
+- webapp > "hello.jsp"
+
+서블릿 + jsp = 업무 순서 : 서블릿 > JSP = 1 페이지
+
+[나의 필기]
+- 커피 한 잔을 2명이서 만드는 > 상단부에 있는 것들을 먼저 구현하고 (자바가 먼저) > jsp 구현
+- 업무는 무조건 Servlet이 먼저
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

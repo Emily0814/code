@@ -1,0 +1,28 @@
+AjaxTest > json-simple-1.1.1.jar download >  json simple 검색 구글 > 다운로드
+
+"Ex07.java"
+"Ex07Data.java"
+"ex07.jsp"
+
+class > zipcode.zip > sql developer > sql 열고 서버에 접속해서 테이블 만들고 만들어진 테이블
+> 오른쪽 클릭해서 데이터 임포트하고 파일 찾아보기에서 zipcode.csv 넣고 계속 다음 누르고 완료 > select해보면 데이터 들어가 있음
+
+"Ex08.java"
+"Ex08Data.java"
+"ex08.jsp"
+
+"Ex09.java"
+"Ex09Data.java"
+"ex09.jsp"
+
+"Ex10.java"
+"Ex10Data.java"
+"Ex10Add.java"
+"Ex10Del.java"
+"Ex10Edit.java"
+"AddressDTO.java"
+"ex10.jsp"
+
+[나의 필기]
+- 테스트할 때 제대로 하는 버릇을 기르자!
+- 오류가 날때 콘솔에 번호가 있으면 sql이 틀린 것!

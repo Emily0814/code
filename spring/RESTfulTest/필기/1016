@@ -1,0 +1,155 @@
+
+Spring MVC Project 구조
+1. src/main/java
+	- 여태 사용하던 폴더와 동일
+	- 패키지 or 파일
+	
+2. src/main/resources
+	- Java 소스 이외의 자원을 보관하는 폴더
+	- 스프링 관련 설정 파일 등을 보관
+	
+3. src/test/java
+	- 단위 테스트용
+	
+4. src/test/resources
+	- 단위 테스트용
+
+5. JRE System Library
+	- JRE 라이브러리
+	- JavaSE-1.6 > 11 (변경할 예정)
+	
+6. Maven Dependencies
+	- 빌드 도구(Maven or Gradle)
+	- 프로젝트 생성 or 라이브러리 관리 or 빌드 or 배포
+	
+7. src
+	7.1 webapp
+		- 웹 루트 폴더
+	7.2 webapp > resources
+		- asset 역할
+		- CSS, JavaScript, Image 등 정적 자원 보관
+	7.3 webapp > WEB-INF
+		7.3.1 classes
+			- 컴파일된 자바 실행 파일 저장(*.class)
+			- 이전 bin
+			- 개발자 관여(X)
+		7.3.2 spring(**************************)
+			- 스프링 관련 모든 설정
+			7.3.2.1 appServlet > servlet-context.xml
+				- 스프링 설정 파일
+			7.3.2.2 root-context.xml
+				- 스프링 설정 파일
+		7.3.3 views
+			- 뷰 페이지 저장(JSP)
+			
+8. pom.xml(***)
+	- Project Object Model
+	- 메이븐 설정 파일
+	
+새 프로젝트
+- New > Spring Legacy Project
+- name: "BeginTest"
+- tamplates : Spring MVC Project
+- package: "com.test.begin"
+
+현재 프로젝트 > 자바 버전 & 스프링 버전 변경
+앞으로 프로젝트 만들때마다 해야함! 잘 기억하기!!!!!!
+- 자바 버전 > 11
+	- pom.xml (11로 버전 변경)
+	- Project > Properties > Project facets > Java 11로 변경
+- 스프링 버전 > 5.0.7.로 변경
+	- pom.xml
+
+
+Spring Framework
+- https://spring.io/projects/spring-framework
+- Spring 1.0 ~ 6.1.13
+- Spring 5.X.X 수업
+- 콘솔 개발, 응용 프로그램 개발, 웹 응용 프로그램 등..
+- 자바 플랫폼을 위한 오픈 소스 애플케이션 프레임워크이다.
+
+Spring Project
+- Spring 
+- Spring MVC
+- Spring AOP
+- Spring Data
+- Spring Security
+- Spring Boot
+- ..
+
+
+Spring > DI(***), IoC, AOP --DI개념을 잘 이해해야지 spring을 잘 할 수 있음!
+
+Spring DI
+- 디자인 패턴: DI > Dependency Injection > 의존(성) 주입
+- 스프링 도입/적용 > Spring DI
+- 스프링에서 가장 중요한 개념 중 하나 > 스프링의 모든 객체 관리에 사용한다.(***)
+- "프로그래밍에서 구성 요소간의 의존 관계가 소스 내부가 아닌 외부 환경에서 정의되게 하는 디자인 패턴"
+
+- 의존 관계?
+- src/main/java > "com.test.begin.di1"
+						> "Main.java"
+						> "Service.java"
+						> "Hong.java"
+			 	> "com.test.begin.di2"
+						> "Main.java"
+						> "Service.java"
+						> "Hong.java"
+			 	> "com.test.begin.di3"
+						> "Main.java"
+						> "Service.java"
+						> "Hong.java"
+						> "di3.xml"
+						
+Spring AOP, Aspect Oriented Programming > 잘 쓰면 가독성이 높아짐
+- 관점 지향 프로그래밍
+- 코드 작성 = 주업무 코드 + 보조업무 코드
+
+Spring AOP 용어
+1. Core Concern
+	- 주업무, 비즈니스 코드
+
+2. Cross-cutting Concern
+	- 보조업무
+
+3. Target
+	- 
+
+4. Proxy
+
+5. JointPoint
+
+6. Pointcut
+
+7. Aspect
+
+8. Advice
+
+
+
+메모장
+- "com.test.begin.aop"
+	- "Main.java"			//메인
+	- "Memo.java"(I)		//메인 업무 객체(인터페이스)
+	- "MemoImpl.java"(C)	//메인 업무 객체(클래스) > 구현체
+
+	- "Logger.java"(C)		//보조 업무 객체(클래스)
+	
+	- "memo.xml"			//스프링 설정 파일
+
+
+
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			

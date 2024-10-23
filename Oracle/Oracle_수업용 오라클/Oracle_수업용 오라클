@@ -1,0 +1,6 @@
+select * from tblInsa; //alt + X
+
+select * from tblTrans;
+
+insert into tblTrans values ('토끼', '기획부', '사원');
+commit; //이클립스는 auto commit이 켜져 있음

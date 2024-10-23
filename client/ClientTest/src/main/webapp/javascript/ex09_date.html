@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex09_date.html -->
+
+    <script>
+
+        //날짜 시간
+        //- 내장 객체 > Date
+
+        //현재 시각
+        var now = new Date(); //new로 만든 것은 전부 Object
+        console.log(now);
+        console.log(now.toString());
+        console.log(typeof now); //object
+
+        //요소 추출
+        //- c.get(Calender.YEAR)
+        console.log(now.getYear());         //124 > 1900년대에 쓰던 함수
+        console.log(now.getFullYear());     //2024
+        console.log(now.getMonth());        //8(0부터)
+        console.log(now.getDate());         //3
+        console.log(now.getDay());          //2(일(0)~토(6))
+        console.log(now.getHours());        //15
+        console.log(now.getMinutes());      //50
+        console.log(now.getSeconds());      //20
+        console.log(now.getMilliseconds()); //155
+        console.log(now.getTime());         //1725346132957
+
+        //출력 > %tF, %tT, %tA
+        console.log(now.toString());
+        console.log(now.toDateString());
+        console.log(now.toTimeString());
+
+        //2024. 9. 3. 오후 4:08:13
+        console.log(now.toLocaleString());
+        console.log(now.toLocaleDateString());
+        console.log(now.toLocaleTimeString());
+
+        //2024-09-03T07:09:15.247Z
+        console.log(now.toISOString()); //ISO 8601
+        //2024-09-03
+        console.log(now.toISOString().split('T')[0]);
+        //07:10:39.972
+        console.log(now.toISOString().split('T')[1].replace('Z',''));
+        //07:14:04
+        console.log(now.toISOString().split('T')[1].substr(0, 8));
+
+        //특정 시각 만들기
+        var chrismas = new Date();
+
+        chrismas.setFullYear(2024);
+        chrismas.setMonth(11);
+        chrismas.setDate(25);
+
+        chrismas.setHours(21);
+        chrismas.setMinutes(0);
+        chrismas.setSeconds(0);
+
+        console.log(chrismas.toLocaleString());
+
+        var birthday = new Date(1995, 10, 10);
+        var birthday = new Date(1995, 10, 10, 12, 0, 0);
+
+
+        //연산
+        //시각 - 시각 = 시간
+        console.log(chrismas - now);    //SQL(일), JavaScript(ms)
+        console.log((chrismas - now) / 1000 / 60 / 60 / 24);
+
+        //시각 + 시간 = 시각
+        //시각 - 시간 = 시각
+        var ani = new Date();
+        // console.log(ani + 100);
+
+        // ani.setTime(ani.getTime() + 100일치 틱);
+        ani.setTime(ani.getTime() + (100 * 24 * 60 * 60 * 1000));
+        console.log(ani.toLocaleString());
+
+    </script>
+
+</body>
+</html>

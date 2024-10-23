@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex01.html -->
+    <h1>jQuery</h1>
+
+    <input type="text" name="txt1" id="txt1">
+
+
+    <!-- 로컬 설치 -->
+    <!-- <script src="js/jquery-3.7.1.js"></script> -->
+
+    <!-- CDN 설치 -->
+    <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4=" crossorigin="anonymous"></script>
+    <script>
+
+        /*
+        
+            jQuery
+            - https://jquery.com/
+            - jQuery is a fast, small, and feature-rich JavaScript library. 
+            - It makes things like HTML document traversal and manipulation, event handling, animation, and Ajax much simpler with an easy-to-use API that works across a multitude of browsers. With a combination of versatility and extensibility, jQuery has changed the way that millions of people write JavaScript.
+
+            [오늘의 말씀]
+            jQuery 쓰지 마세요~ > 어그로가 반이다. 점유율이 높다.
+            jQuery > MPA(PC, 웹)
+            vs
+            Angular/React/Vue > SPA(웹,모바일)
+            https://alpinejs.dev/ 사이트 들어가서 jQuery 공부해보기
+
+            https://releases.jquery.com/ > jQuery Core 3.7.1:  uncompressed > 눌러서 링크 저장
+            > 웹 열어서 개발자도구 들어가서 Network 들어가서 잘 들어갔는지 확인하기, 잘못 들어갔으면 404가 확인됨
+
+            [여기까지가 끝인가보오]
+
+        */
+
+        function f1 () {
+            
+        }
+
+        // console.log(f1);
+        console.log(jQuery);
+
+        // 1. BOM > BOM 트리
+        window.document.all.txt1.value = 'BOM';
+
+        // 2. DOM > getXXX() or DOM Tree(Axis) or querySelector()
+        document.getElementById('txt1').value = 'DOM';
+
+        // 3. jQuery > 쉽고 편하게
+        jQuery('#txt1').val('jQuery');
+
+    </script>
+
+</body>
+</html>

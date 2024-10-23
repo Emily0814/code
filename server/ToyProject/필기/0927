@@ -1,0 +1,29 @@
+AjaxTest	>	"Ex03.java"
+			>	"Ex03Data.java"
+			>	"Ex04.java"
+			>	"Ex04Data.java"
+			
+			>	"Ex05.java"
+			>	"Ex05Data.java"
+			>	"Ex05Check.java"
+
+			>	"Ex06.java"
+			>	"Ex06Data.java"
+
+			>	"ex03.jsp"
+			>	"ex03ok.jsp"
+			
+			>	"ex04.jsp"
+			>	"ex05.jsp"
+			>	"ex05check.jsp"
+			>	"ex06.jsp"
+
+[나의 필기]
+Ajax, 브라우저 용도별로 따로 만듦
+까빡임없이 데이터를 주고 받을 수 있는 기능 > Ajax
+
+
+[이 3개가 되야지 웹 만들 수 있음! 최우선!!!]
+- MVC 구조 > 정리 > Memo
+- 인증 > 정리 (0926 수업)
+- Ajax

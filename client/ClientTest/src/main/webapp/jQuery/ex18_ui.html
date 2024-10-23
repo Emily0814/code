@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.14.0/themes/base/jquery-ui.css">
+    <style>
+        #a1 {
+            width: 300px;
+        }
+        #dialog1 {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex18_ui.html -->
+    <h1>컨트롤</h1>
+
+    <!-- 다이얼로그 -->
+    <input type="button" value="확인" id="btn5">
+    <div id="dialog1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem id enim beatae at vitae? Veniam accusantium omnis, officia eveniet delectus perferendis illum labore aliquid. Possimus id inventore autem commodi dolorem?
+    </div>
+
+
+    <!-- 날짜 -->
+     <div>
+        <label>날짜 선택(HTML5): </label>
+        <input type="date">
+    </div>
+    
+    <div>
+        <label>날짜 선택(jQuery UI): </label>
+        <!-- <div type="text"></div>  잘 .. 모르겠다..--> 
+        <input type="text" id="date1">
+    </div>
+
+    <hr>
+
+    <!-- Button -->
+    <input type="button" value="글쓰기" id="btn1" class="btn">
+    <input type="button" value="돌아가기" id="btn2" class="btn">
+
+    <hr>
+
+    <div id="btns">
+    <input type="button" value="글쓰기" id="btn3" class="btn">
+    <input type="button" value="돌아가기" id="btn4" class="btn">
+    </div>
+
+    <hr>
+    <a href="https://naver.com" class="btn">네이버</a>
+
+
+    <hr>
+
+
+
+    <!-- Accordion -->
+
+    <div id="a1">
+        <h2>HTML</h2>
+        <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. At quos maxime ad aut provident consequuntur sequi voluptas officia, non quisquam maiores libero, quidem nostrum id voluptatibus qui harum nesciunt eaque.</div>
+        
+        <h2>CSS</h2>
+        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus at repudiandae vitae, nostrum ipsum dolores dolorem, modi sint atque eum eos! Consequuntur modi beatae quaerat assumenda? Soluta consequatur voluptas suscipit!</div>
+        
+        <h2>JavaScript</h2>
+        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Accusantium suscipit eos deserunt rem facilis ab. Ad deleniti eligendi unde commodi, cupiditate enim consequatur id perferendis suscipit, nemo, delectus perspiciatis laboriosam.</div>
+    </div>
+
+    <script src="js/jquery-3.7.1.js"></script>
+    <script src="https://code.jquery.com/ui/1.14.0/jquery-ui.js"></script>
+
+    <script>
+        
+        $('#a1').accordion({
+            collapsible: true
+        });
+
+        $('.btn').button();
+        $('#btns').controlgroup(); //떨어져있는 버튼이 합쳐짐
+
+        $('#date1').datepicker({
+            dateFormat: 'yy-mm-dd',
+            // minDate: -5,
+            // maxDate: +3
+            // minDate: '-1M -5D',
+            // maxDate: '1M 5D'
+            minDate: '2024-06-19',
+            maxDate: '2024-12-03'
+        });
+
+        // $('#dialog1').hide();
+        // Ctrl + G : 숫자입력하면 해당 라인으로 이동
+        /*
+
+            대화 상자
+            1. modal
+                - 팝업창이 포커스를 독점한다.
+
+            2. modeless > 대부분 이것 사용
+                - 팝업창과 부모창의 포커스 전환이 자유롭다.
+
+        */
+
+
+        $('#dialog1').hide();
+        $('#btn5').click(() => {
+            $('#dialog1').dialog({
+                title: '대화 상자',
+                width: 300,
+                height: 400,
+                draggable: true,
+                resizable: false,
+                modal: true,
+                buttons: {
+                    // 'text': function() {
+                    //     alert();
+                    // }
+                    '확인': function() {
+                        $('#dialog1').dialog('close'); //이건 그냥 내가 해봄
+                    },
+                    '취소': function() {
+                        $('#dialog1').dialog('close'); //강사님이 맘에 안들어하셨음 말도안되는 코드라고 하심
+                    }
+                }
+            });
+        });
+
+    </script>
+
+</body>
+</html>

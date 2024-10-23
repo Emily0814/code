@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex39_hoisting.html -->
+
+    <script>
+        // var c;
+        // 호이스팅, Hoisting
+        // - 함수 호이스팅(***) > 면접에서 물어볼 수 있음
+        // - 변수 호이스팅
+
+        // 선언 > 사용
+
+        let a = 10;
+        console.log(a);
+        
+        f1();
+        
+        function f1() {
+            alert('f1');
+        }
+        // 왠만하면 맞춰서 선언 후에 사용하자
+
+        var b = 20;
+        console.log(b);
+
+        // console.log(c); //undefined
+        // var c = 30;
+
+        console.log(d);
+        let d = 40;
+
+
+
+    </script>
+
+</body>
+</html>

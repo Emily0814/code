@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 #box2 #box3 #box4 {
+            width: 680px;
+            margin: 10px auto;
+            border: 0px solid black;
+        }
+
+        #box1 div,
+        #box2 div,
+        #box3 div,
+        #box4 div {
+            float: left;
+            margin-right: -10px;
+            border: 10px solid black;
+            overflow: hidden;
+            margin-bottom: 10px;
+        }
+
+        #box1 div img {
+            display: block;
+            transform: translate(-126px, 0px);
+            transition: all .5s;
+        }
+
+        #box1 div:hover img {
+            transform: translate(0px, 0px);
+        }
+
+        #box2 div img {
+            display: block;
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        #box2 div:hover img {
+            opacity: 1;
+        }
+
+        #box3 div img {
+            display: block;
+            transform: scale(0, 0);
+            transition: all .5s;
+            opacity: 0;
+            /* 투명도 */
+        }
+
+        #box3 div:hover img {
+            transform: scale(1, 1);
+            opacity: 1;
+        }
+
+        #box4 div img {
+            transform: translate(0px, -126px) scale(0, 0) rotate(0deg);
+            display: block;
+            opacity: 0;
+            transition: all .5s;
+        }
+
+        /* 
+        
+            1. translate(x, y): 요소를 X축과 Y축으로 이동시킵니다.
+            - translate(0px, -126px): X축으로는 이동하지 않고(0px), Y축으로 위쪽으로 126px 이동합니다.
+            - translate(0px, 0px): hover 시 원래 위치로 돌아옵니다.
+
+            2. scale(x, y): 요소의 크기를 X축과 Y축으로 조절합니다.
+            - scale(0, 0): 요소의 크기를 0으로 만들어 보이지 않게 합니다.
+            - scale(1, 1): hover 시 원래 크기로 돌아옵니다.
+
+            3. rotate(angle): 요소를 지정된 각도만큼 회전시킵니다.
+            - rotate(0deg): 처음에는 회전하지 않습니다.
+            - rotate(360deg): hover 시 360도 회전합니다 (한 바퀴 돕니다).
+
+        
+        */
+
+
+        #box4 div:hover img {
+            transform: translate(0px, 0px) scale(1, 1) rotate(360deg);
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+    <div style="width: 700px; margin: 30px auto;">
+        <div id="box1">
+            <div><img src="/css/images/rect_icon02.png"></div>
+            <div><img src="/css/images/rect_icon01.png"></div>
+            <div><img src="/css/images/rect_icon03.png"></div>
+            <div><img src="/css/images/rect_icon04.png"></div>
+            <div><img src="/css/images/rect_icon05.png"></div>
+        </div>
+        <div id="box2">
+            <div><img src="/css/images/rect_icon01.png"></div>
+            <div><img src="/css/images/rect_icon02.png"></div>
+            <div><img src="/css/images/rect_icon03.png"></div>
+            <div><img src="/css/images/rect_icon04.png"></div>
+            <div><img src="/css/images/rect_icon05.png"></div>
+        </div>
+        <div id="box3">
+            <div><img src="/css/images/rect_icon01.png"></div>
+            <div><img src="/css/images/rect_icon02.png"></div>
+            <div><img src="/css/images/rect_icon03.png"></div>
+            <div><img src="/css/images/rect_icon04.png"></div>
+            <div><img src="/css/images/rect_icon05.png"></div>
+        </div>
+        <div id="box4">
+            <div><img src="/css/images/rect_icon01.png"></div>
+            <div><img src="/css/images/rect_icon02.png"></div>
+            <div><img src="/css/images/rect_icon03.png"></div>
+            <div><img src="/css/images/rect_icon04.png"></div>
+            <div><img src="/css/images/rect_icon05.png"></div>
+        </div>
+    </div>
+</body>
+
+</html>

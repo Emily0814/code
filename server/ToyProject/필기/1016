@@ -1,0 +1,59 @@
+https://spring.io
+
+Eclipse + Spring 개발 환경 = STS
+Spring Tool Suite 3 > STS 3 > Spring + Spring Boot
+Spring Tool Suite 4 > STS 4 > Spring Boot
+
+우리가 설치한 spring에서 STS.ini > openFile 밑에 작성
+-vm
+C:/class/dev/jdk-11/bin/javaw.exe
+
+1. STS.ini > JDK 11 설정
+2. Lombok > 설치
+
+C:\class\code\spring 폴더(워크스페이스)
+
+설정 
+- encoding
+	- Workspace > Text file encoding
+	- CSS Files > Encoding
+	- HTML Files > Encoding
+	- CSS Files > Encoding
+	- Content Types > Text > Default encoding
+- font
+- Runtime Enviroments > Tomcat
+
+
+개발 도움 요소
+1. SDK > JDK > 개발환경 + 코드 제공
+2. Library > *.jar
+3. Framework > 개발 환경 + 코드 제공
+4. API
+
+
+
+Spring Framework
+- Spring(Core) 프로젝트 
+- 추가 기능 프로젝트
+- Spring Boot 프로젝트 > 처음부터 이것으로 시작하면 기초를 알지 못함 > Core부터 시작!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

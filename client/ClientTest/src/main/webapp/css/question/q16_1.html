@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #main {
+            width: 500px;
+            margin: 0px auto;
+        }
+
+        h1 {
+            font-variant: small-caps;
+        }
+
+        .item {
+            border: 1px solid #999;
+            border-radius: 5px;
+            margin-bottom: 5px;
+            width: 350px;
+            overflow: hidden;
+        }
+
+        .item label {
+            font-variant: small-caps;
+            background-color: #eee;
+            border-top-left-radius: 4px;
+            border-bottom-left-radius: 4px;
+            display: block;
+            float: left;
+            width: 150px;
+            height: 130px;
+            text-align: center;
+            font-size: 3em;
+            font-weight: bold;
+            cursor: pointer;
+            position: relative;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            padding-top: 20px;
+        }
+
+        .item input[type=radio] {
+            display: none;
+        }
+
+        .item .disc {
+            float: left;
+            width: 150px;
+            height: 150px;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: 100% 100%;
+            /* margin-left: 20px;  밑에 대신 이걸로 해도 괜춘? */
+            margin: 0px 20px;
+        }
+
+        /* 
+            .item::after {
+            content: ' ';
+            display: block;
+            clear: both;
+        } 
+        */
+
+        #disc1 {
+            background-image: url(/css/images/lp01.png);
+        }
+
+        #disc2 {
+            background-image: url(/css/images/lp02.png);
+        }
+
+        #disc3 {
+            background-image: url(/css/images/lp03.png);
+        }
+
+        #disc4 {
+            background-image: url(/css/images/lp04.png);
+        }
+
+        input[type=radio]:checked+label {
+            background-color: tomato;
+            color: white;
+        }
+
+        input[type=radio]:checked+label+div {
+            transition: all 1000s;
+            transition-timing-function: linear;
+            transform: rotate(300000deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div id="main">
+        <h1>Music</h1>
+        <div class="item">
+            <input type="radio" name="rb" id="rb1">
+            <label for="rb1">Play</label>
+            <div class="disc" id="disc1"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb2">
+            <label for="rb2">Play</label>
+            <div class="disc" id="disc2"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb3">
+            <label for="rb3">Play</label>
+            <div class="disc" id="disc3"></div>
+        </div>
+        <div class="item">
+            <input type="radio" name="rb" id="rb4">
+            <label for="rb4">Play</label>
+            <div class="disc" id="disc4"></div>
+        </div>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* 
+            동일한 선택자를 2번 이상 선언 가능
+            1. 속성 충돌X > 아무 문제 없음
+            2. 속성 충돌O > 마지막 속성이 적용
+            
+
+            *** 동일한 선택자를 2번 이상 선언하지 말것!!
+        */
+
+        /* div { color: blue; }
+        div { background-color: yellow; } */
+
+        /* div { color: blue; }
+        div { color: yellow; } */
+
+        /*         
+            
+            속성 충돌 발생!! > 선택자 우선 순위!!
+            - 서로 다른 선택자가 동일한 태그를 선택했을 때
+            > 동일한 속성 적용 > 어떤 선택자의 속성을 적용할지?
+            - 점수 계산 > 점수가 가장 높은 선택자를 적용
+
+            1. 태그선택자: 개당 1점
+            2. 클래스선택자: 개당 10점
+            3. 아이디선택자: 개당 100점
+
+        */
+
+        /* div#box1.box { color: plum; } */
+        /* div#box1 { color: red; } */
+        /* #box1 { color: greenyellow; } */
+        /* .box { color: orange; } */
+        /* div { color: blue; } */
+        /* div { color: orange; } */
+        
+        /* #box1 { color: chocolate; } */
+        .box.aaa { color: rgb(128, 126, 0); }
+
+        /* .aaa.bbb.ccc.ddd.eee.fff.ggg.hhh.iii.jjj.box { color: green; }
+        .aaa.bbb.ccc { color: green; } */
+
+        .box { color: blue; }
+
+        #box1 { color: orange; }
+
+        body > div > div#box2 { color: blueviolet; }
+        div > div#box2 { color: red; }
+        
+
+    </style>
+</head>
+<body>
+    <!-- ex13_selector.html -->
+    <!-- <div id="box1" class="box aaa">상자1</div> -->
+    <div id="box1" class="box aaa bbb ccc ddd eee fff ggg hhh iii jjj">상자1</div>
+    
+    <div>
+        <div id="box2" class="box aaa bbb ccc ddd eee fff ggg hhh iii jjj">상자2</div>
+    </div>
+
+    <p class="box">상자3</p>
+
+</body>
+</html>

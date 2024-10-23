@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- ex43_closure.html -->
+
+    <input type="button" value="버튼1" id="btn1">
+    <input type="button" value="버튼2" id="btn2">
+
+    <script>
+
+        //클로저, Closure
+
+        //전역 함수
+        function outer() {
+
+            //지역 변수(outer)
+            let a = 10;
+            console.log('a', a);
+
+            //지역 함수(outer)
+            function inner() {
+
+                //지역 함수(inner)
+                let b = 2;
+                console.log('b', b);
+
+            }
+
+        
+        
+            inner();
+            // console.log('b', b);
+
+        }//outer
+
+        outer();
+        // console.log('a', a);
+
+        // inner(); > 여기서 호출하면 지역을 벗어났으므로 에러남
+        // outer.inner();
+
+        const btn1 = document.getElementById('btn1');
+        const btn2 = document.getElementById('btn2');
+
+        let num1 = 100; //전역 변수
+    
+        btn1.onclick = function() {
+
+            console.log('num1', num1);
+
+            let num2 = 200; //지역 변수(btn1.onclick)
+            console.log('num2', num2);  //여기서 호출되고 죽으면서 임시저장소에 저장되었다가 btn2 누르면 살아남
+
+            btn2.onclick = function() {
+                    let num3 = 300; //지역 변수(btn2.onclick)
+                    console.log('num3', num3);
+                    // num2 = 2000; 자바스크립트에서는 수정이 가능함 
+                    console.log('num2', num2);  //************ 죽은애가 살아있다...ㅎㄷㄷ > closure처리가 되서 실행됨
+                    console.log('num1', num1);
+            };
+
+            // (function() {
+            //         let num3 = 300; //지역 변수(btn2.onclick)
+            //         console.log('num3', num3);
+            //         console.log('num2', num2);  //************ 죽은애가 살아있다...ㅎㄷㄷ
+            //         console.log('num1', num1);
+            // }); 이런 경우는 num2가 죽기 전에 호출되므로 상관없음
+
+        };
+
+
+    </script>
+
+
+</body>
+</html>

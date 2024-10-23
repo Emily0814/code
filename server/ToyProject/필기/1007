@@ -1,0 +1,15 @@
+1001 이어서
+
+- "com.test.api.map" 	> "Add.java"
+
+- views > "map" > "ex05.jsp"
+				> "ex06.jsp"				
+				> "ex07.jsp"
+				> "ex08.jsp"
+				
+- "com.test.api.food" 	> "Food.java" //메인 페이지
+						> "CategoryDTO.java"
+						> "FoodDTO.java"
+						> "AddFood.java"
+
+- views > "food" >" food.jsp"

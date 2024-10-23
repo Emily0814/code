@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            border: 1px solid black;
+            width: 200px; height: 200px;
+            background-color: violet;
+        }
+    </style>
+</head>
+<body>
+    <!-- ex04.html -->
+    <h1>jQuery Effect</h1>
+
+    <input type="button" value="버튼1" id="btn1" class="btn">
+    <input type="button" value="버튼2" id="btn2" class="btn">
+    <input type="button" value="버튼3" id="btn3" class="btn">
+
+    <hr>
+
+    <div id="box1">상자</div>
+
+    <script src="js/jquery-3.7.1.js"></script>
+
+    <script>
+        
+        // jQuery Effect Function
+        // 1. hide(time), show(time), toggle(time)
+        // 2. fadeOut(), fadeIn(), fadeToggle()
+        // 3. slideUp(), slideDown(), slideToggle()
+        // 4. animate() > 사용자 정의
+
+        let n = 1;
+
+        $('#btn1').click(() => {
+
+            // $('#box1').hide();
+            // $('#box1').hide(1000);
+            // $('#box1').hide('slow'); 적당한 속도가 필요하면 slow, fast 중에 사용하거나 초를 넣어준다
+            // $('#box1').hide('fast');
+            // $('#box1').fadeOut();
+            // $('#box1').slideUp();
+
+            // let obj = {
+            //     width: '400px',
+            //     height: '400px'
+            // };
+
+            // $('#box1').animate(객체);
+            // $('#box1').animate(obj);
+
+            // $('#box1').animate ({
+            //     width: '400px',
+            //     height: '400px'
+            // });
+
+            // box1.style.width = parseInt(box1.style.width) + 50 + 'px';
+
+            // $('#box1').animate({
+            //     width: '+=50px',
+            //     height: '+=50' /* px을 생략해도 가능 */
+            // });
+
+            // $('#box1').animate({
+            //     width: '+=100',
+            //     height: '+=100'
+            // }, 'fast', function(){
+            //     // 애니메이션이 완료되면 호출
+            //     // alert();
+            //     $('h1').text('jQuery Effect ' + n);
+            //     n++;
+            // });
+
+            // $('#box1').animate({
+            //     width: '+=100'
+            // }, 1000, function() {
+            //     $('#box1').animate({
+            //     height: '+=100'
+            //     },1000, function(){
+            //         $('#box1').animate({
+            //             // fontSize: '3rem'
+            //             'font-size': '3rem'
+            //         }, 1000);
+            //     });
+            // });
+
+            // $('#box1').animate({
+            //     width: '+=100'
+            // }, 1000);
+
+            // $('#box1').animate({
+            //     height: '+=100'
+            // }, 1000);
+
+            // $('#box1').animate({
+            //     'font-size': '3rem'
+            // }, 1000);
+
+            // ***중요한 특성 중 하나이다.
+            // $('#box1')
+            //     .animate({
+            //         width: '+=100'
+            //     }, 1000)
+            //     .animate({
+            //         height: '+=100'
+            //     }, 1000)
+            //     .animate({
+            //         'font-size': '3rem'
+            //     }, 1000);
+
+            $('#box1').slideUp()
+                      .slideDown()
+                      .fadeOut()
+                      .fadeIn()
+                      .animate({
+                        borderWidth: '10px'
+                      });
+
+
+        });
+
+        $('#btn2').click(() => {
+
+            // $('#box1').show();
+            // $('#box1').fadeIn();
+            // $('#box1').slideDown();
+
+        });
+
+        $('#btn3').click(() => {
+
+            // $('#box1').toggle();
+            // $('#box1').fadeToggle();
+            // $('#box1').slideToggle();
+
+        });
+
+
+    </script>
+    
+</body>
+</html>

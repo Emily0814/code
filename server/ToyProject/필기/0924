@@ -1,0 +1,43 @@
+- com.test.java > "Ex01.java"
+- webapp > "ex01.jsp"
+
+*** 서블릿 > JSP
+
+페이지 요청 > 서블릿 호출 > 서블릿 업무 코드 처리 > 산출물을 JSP에 전달 > JSP 호출 > 전달받은 산출물 + HTML 페이지 생성 > 페이지 응답
+
+1. 서블릿을 생성한다.
+
+[나의 필기]
+- Ctrl + F11 눌러서 실행했을 때 404 오류가 뜨면 무조건 100% 주소가 틀린 것
+
+오라클 동작 확인
+Win + R > services.msc
+- OracleServixeXE > 실행 중
+- OracleXETNSListener > 실행 중
+
+system/java1234
+select * from tabs;
+
+11g Express Edition
+
+새프로젝트
+- "JDBCTest" > "jdbc" + web.xml(O)
+
+
+- "com.test.java" 	> "Ex01.java"
+					> "Ex02.java"
+					> "DBUtul.java"
+					
+					> "Ex03_Statement.java"
+					
+
+					
+[나의 필기]
+alter user hr account unlock;
+alter user hr identified by java1234;
+
+describe tblAddress;
+
+
+
+
