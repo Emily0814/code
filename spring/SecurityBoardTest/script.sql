@@ -10,3 +10,13 @@ create table Board (
 );
 /
 create sequence seqBoard;
+
+commit;
+
+insert into Board (seq, subject, content, regdate, memberid) values (seqBoard.nextVal, '게시판입니다.', '내용입니다.', default, 'dog');
+
+select * from Board;
+
+commit;
+
+select * from member;

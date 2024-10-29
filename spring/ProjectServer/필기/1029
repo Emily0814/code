@@ -1,0 +1,81 @@
+
+Java Document(javadoc.exe)
+- 전체 프로젝트 문서
+- 핵심 업무(웹페이지 5~6장) 충실 300% + 나머지 업무(X)
+
+REST API
+- Ajax 응답용
+- 개발 문서(핵심 업무)
+- 스프링 > Swagger
+
+1. 새 프로젝트
+- New > Spring Legacy Project > Ajax 응답용
+- Project name: "AjaxServer"
+- Templates: Spring MVC Project
+- Enter a top-level-package: "com.test.ajax"
+
+1. 새 프로젝트 > Spring MVC Project
+- New > Spring Legacy Project
+- Project name: "ProjectServer"
+- Templates: Spring MVC Project
+- Enter a top-level-package: "com.test.project"
+
+- "com.test.ajax.controller" > "DataController.java"
+
+
+
+AjaxServer + Swagger 구축
+1. 의존성 추가
+- pom.xml
+
+		<!-- Swagger -->
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger2</artifactId>
+		    <version>2.9.2</version>
+		</dependency>
+		<dependency>
+		    <groupId>io.springfox</groupId>
+		    <artifactId>springfox-swagger-ui</artifactId>
+		    <version>2.9.2</version>
+		</dependency>
+		
+		
+2. 설정 파일
+- "com.test.rest.config" > "SwaggerConfig.java"	
+
+3. servlet-context.xml
+
+4. 실행
+- http://localhost:8090/ajax/swagger-ui.html
+		
+5. 도움말 작성
+
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
