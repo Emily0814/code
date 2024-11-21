@@ -22,14 +22,19 @@ public class SecurityConfig {
 		http.authorizeHttpRequests(auth -> auth
 									.requestMatchers("/").permitAll()	//모든 사람이 접근 가능 허용
 									.requestMatchers("/login").permitAll()
-									.requestMatchers("/join", "/joinok").permitAll());
+									.requestMatchers("/join", "/joinok").permitAll()
+									.requestMatchers("/my").hasAnyRole("MEMBER", "ADMIN")	//제시된 것 중 하나만 만족해도 접근 가능
+									.requestMatchers("/admin").hasRole("ADMIN")
+									.anyRequest().authenticated()	//나머지 경로 > 인증 사용자만
+		);
 		
 		//CSRF 토큰 해제
-		http.csrf(auth -> auth.disable());
+		//http.csrf(auth -> auth.disable());
 		
 		//커스텀 로그인 설정
 		http.formLogin(auth -> auth
 						.loginPage("/login")	//사용자 로그인 페이지 URL
+						.defaultSuccessUrl("/")
 						.loginProcessingUrl("/loginok").permitAll()
 						);
 		
@@ -42,6 +47,21 @@ public class SecurityConfig {
 
 		return new BCryptPasswordEncoder();
 	}
+	
+	//로그아웃 설정
+	@Bean
+	public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+		
+		http.logout(auth -> auth
+						.logoutUrl("/logout")
+						.logoutSuccessUrl("/")
+			);
+		
+		return http.build();
+	}
+	
+	
+	
 	
 }
 
