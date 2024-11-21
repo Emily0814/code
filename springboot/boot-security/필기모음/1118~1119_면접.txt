@@ -1,0 +1,117 @@
+11/18
+[나의 필기]
+Tiles > Layout 페이지
+이건 따로 안하겠습니다~
+
+강사님이 필기한 곳은 오늘 Controller에 있음~
+
+11/19
+11g
+12c 이후
+19c 이후
+
+https://www.oracle.com/kr/database/technologies/xe-downloads.html
+> Oracle Database 21c Express Edition for Windows x64 다운로드
+> 설치된 앱에서 오라클 전버전 삭제하고 exe 눌러서 설치
+
+[코딩 테스트]
+- 백준, 프로그래머 수준으로는 보지 않음
+- 수업 문제 > 배웠던 문제 연습해보자
+1. 제어문
+2. 자료 구조(배열 or 컬렉션)
+
+주민등록번호 유효성 > 손코딩 > 코드화시키지 못할 경우, 글 작성이라도 하자..
+예시) 1. 데이터입력 2. 어쩌구저쩌구..
+
+[면접 - 질의응답]
+클래스? 1분 분량
+2가지 대답 준비
+- 1~2문장
+- 1분 분량
+
+1. 자바?
+2. 값형 vs 참조형
+3. 값형 형변환 vs 참조형 형변환
+4. 변수 스코프 > 지역 변수, 멤버 변수
+5. 클래스? > 면접볼 때, 하나만 질문한다면 이것을 질문할 것이다~ > 개념
+	- 클래스 써봤어?
+	- 클래스 어떤 업무 적용?(******)
+	- 적용했는데 성공? 실패? 성공? 원인? 정확한 용법과 이해를 잘한건지? 실패원인은? 분석은 했는지? 등등 물고 늘어진다고 함.
+6. 객체?
+7. 인스턴스?
+8. 생성자
+9. 오버로딩
+10. 접근 지정자?
+11. 상속
+12. 추상 클래스/메서드
+13. 인터페이스
+14. 제네릭
+15. 정적멤버
+16. 컬렉션 > 리스트 vs 맵 vs 셋 > 프로젝트 컬렉션 반드시 사용해야할 만한 경우가 있었냐? 그 이유? 어떤 컬렉션?
+17.  String과 등등 면접질문 검색해서 보고 크로스해서 정리하자~
+- https://velog.io/@ka0ka0ka/1-3d8vtbh5
+18. 메소드 인자를 넘기는 방식
+- Call by Value  
+- Call by Reference
+
+[오라클]
+1. 업무 구현 > SQL, 순서!
+2. 조인
+	- 종류, 특징, 장단점
+	- 단순, 내부, 외부
+	- 어떤 업무에 적용(***) 
+3. 서브쿼리
+4. 오브젝트 종류 > 트리거, 인덱스 등..
+4. PL/SQL
+5. 정규화 > 1~3 정규형 > 어떤 업무에 적용(***)
+6. 트랜잭션 > 어떤 업무에 적용(***) > 면접에서 하나만 질문한다면 이것!!
+7. 옵티마이저 > 이건 관심있으면 보자~
+	- between, in
+	- join, subquery > 옵티마이저 > 최적의 SQL 변경 > O
+
+
+- 아파치 > 웹서버
+- 아파치 톰캣 > 웹서버(HTML) + WAS(컨테이너)
+
+- 웹서버(nginx) > 톰캣(was)
+
+Servlet/JSP/Spring
+어노테이션은 잘 설명안함
+***스프링에서 빈을 설명하라
+
+
+[오라클 developer에서 작성]
+select * from v$version;
+
+-- 계정 생성
+alter user hr IDENTIFIED by java1234 account unlock;
+
+create user c##springboot identified by java1234;
+
+drop user c##springboot;
+
+alter session set "_ORACLE_SCRIPT"=true;
+
+create user springboot identified by java1234;
+
+grant connect, resource, dba to springboot;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

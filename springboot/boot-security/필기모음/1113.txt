@@ -1,0 +1,113 @@
+스프링 부트 > HikariCP
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+강사님이 주신 script.txt파일 db에 넣기!
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+
+DB 관련 단위 테스트
+- src/test/java > com.test.mybatis > "DatasourceTest.java"
+- src/test/java > com.test.mybatis > "MapperTest.java"
+
+
+MyBatis 관련 작업
+- "com.test.mybatis.mapper" > "AddressMapper.java"(I)
+- src/main/resources > "com" > "test" > "mybatis" > "mapper" > "AddressMapper.xml"
+
+
+업무 페이지
+- tblAddress > list.do
+- "com.test.mybatis.controller" > "AddressController.java"
+- "com.test.mybatis.service" > "AddressService.java"
+- "com.test.mybatis.domain" > "AddressDTO.java"
+
+- views > "list.jsp"
+
+Spring Boot + MyBatis + Thymeleaf
+
+
+Spring Boot
+- Thymeleaf(***), Mustache, Groovy, Freemarker, Velocity 등
+
+
+Thymeleaf
+- 템플릿 엔진 > 뷰 페이지를 만드는 프로그램 or 환경
+- 자바 웹 or 독립형 환경 > HTML, JavaScript, CSS 등을 처리하는 서버 사이드 템플릿 엔진입니다.
+
+
+프로젝트 생성
+- Name: "boot-thymeleaf" ***
+- Type: Gradle(Groovy)
+- Packaging: Jar
+- Java Version: 21
+- Language: Java
+- Group: "com.test"
+- Artifact: "boot-thymeleaf"
+- Package: "com.test.thymeleaf" ***
+- Dependency: 
+	- Lombok
+	- Spring Web
+	- MyBatis Framework
+	- Oracle Driver
+	- Spring Boot DevTools
+	- Thymeleaf 
+- Finish 
+
+
+설정
+- application.yml
+	- 데이터 소스 설정
+	- 서버 포트 변경
+	- 타임리프 캐시 비활성화
+	
+파일 생성
+- "com.test.thymeleaf.controller" > "ThymeleafController.java"
+- "com.test.thymeleaf.mapper" > "AddressMapper.java"(I)
+- "com.test.thymeleaf.domain" > "AddressDTO.java"
+
+- src/main/resources > templates > "result.html"
+
+- src/main/resources/mapper > "AddressMapper.xml"
+
+- ??language_ko?? > 메시지 파일을 찾지 못함.
+
+- src/main/resources > messages.properties
+- src/main/resources > messages_en.properties
+- src/main/resources > messages_ja.properties
+
+
+[나의 필기]
+- 디자이너(퍼블리시) > 클라이언트 코드 작성 > (전달) > 백엔드 개발자
+
+https://www.thymeleaf.org/ecosystem.html
+> https://github.com/thymeleaf/thymeleaf-extras-eclipse-plugin 눌러서 install주소 복사
+> https://www.thymeleaf.org/eclipse-plugin-update-site/
+> Help > Install New Software > Add > 이름(thymeleaf)원하는것 넣고 주소에 복사한 것 붙여넣기
+> 체크하고~ next next 허용 허용 ~ 이건 알아서 내가 하자~
+
+[실패하면!]
+> help > About Spring Tools Suite4 > Installation Details > 해당 프로그램 제거 후 재설치
+
+
+[프로젝트]
+주제 > 줄여서
+1주: 구현 전 프로세스
+2주: 구현
+3주: 구현
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

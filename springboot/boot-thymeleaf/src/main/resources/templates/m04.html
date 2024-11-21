@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="http://bit.ly/3WJ5ilK">
+    <style>
+
+    </style>
+</head>
+<body>
+	<h1>HTML 속성 조작하기</h1>
+	
+	<!--
+		*** 타임리프의 표현식들은 반드시 th:속성과 같이 사용한다.	
+		*** HTML의 대부분의 속성은 th:속성 으로 제공된다.	
+	-->
+	<div>${txt}</div>
+	<div th:text="${txt}"></div>
+
+	<div>
+		<div><input type="text" name="num" th:value="${num}" th:size="${num}"></div>
+		<div><input type="text" th:value="${txt}"></div>
+	</div>
+	
+	<div style="background-color: cornflowerblue;">Box</div>
+	<div th:style="'background-color: ' + ${color} + ';'">Box</div> <!-- 바인딩이 2개 이상일 경우, 인식 불가능, ''로 구분해줘야함 -->
+	<div th:style="|background-color: ${color};|">Box</div>
+
+	<hr>
+	
+
+	<div><input type="checkbox" id="cb1" th:checked="${flag}">체크함</div>
+	<div><input type="checkbox" th:checked="${age >= 18}">성인</div>
+	
+	<hr>
+	
+	<div>
+		<select>
+			<option value="red">red</option>
+			<option value="yellow">yellow</option>
+			<option value="blue">blue</option>
+			<option value="cornflowerblue" th:selected="${color == 'cornflowerblue'}">cornflowerblue</option>
+			<option value="orange">orange</option>
+		</select>
+	</div>
+	
+	
+	
+	<script>
+		<c:if test="${flag}">
+					
+		</c:if>
+	
+	</script>
+	
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

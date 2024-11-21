@@ -1,0 +1,20 @@
+프로젝트 생성
+- Name: "boot-jsp" ***
+- Type: Gradle(Groovy)
+- Packaging: Jar
+- Java Version: 21
+- Language: Java
+- Group: "com.test"
+- Artifact: "boot-jsp"
+- Package: "com.test.jsp" ***
+- Dependency: 
+	- Lombok
+	- Spring Web
+- Finish 
+
+
+- dependency 추가하는 법
+ > 프로젝트 오른쪽 버튼으로 누르고 spring
+ > Add Starters 눌러서 원하는 dependency(예를 들어, lombok) 누르고
+ > build.gradle 누르고 finish
+ > 프로젝트 오른쪽 버튼으로 누르고 Gradle > refresh 

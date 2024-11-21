@@ -1,0 +1,22 @@
+1. 설치 
+https://www.oracle.com/java/technologies/javase/jdk21-archive-downloads.html
+> Java SE Development Kit 21.0.4 > Windows x64 Installer 다운로드
+
+https://spring.io/tools
+> Spring Tools 4 for Eclipse > 4.26.0 - WINDOWS X86_64
+
+2. 환경변수
+user에 대한 사용자 변수(U)
+> Path > %JAVA_HOME%\bin
+
+시스템 변수(S)
+> Path 편집 > %JAVA_HOME%\bin 맨 위로 설정
+
+3. lombok 설치
+
+4. stringboot 폴더 만들기
+
+5. sts4.exe 실행
+> Keep String Tools 아래 것 선택하기
+
+6. 끝! 프로젝트 만들기는 프로젝트 생성txt 참고~

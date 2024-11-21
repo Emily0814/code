@@ -1,0 +1,2 @@
+- com.test.jpa.entity > "Info.java"
+				 	  > "Memo.java"

@@ -1,0 +1,248 @@
+JDK 버전 변경
+- JDK 11, 8      > Spring Legacy Project
+                    > Spring Boot 2.X
+- JDK 17, 21, 23 > Spring Boot 3.X(2022년 11월)
+
+JDK 17 설치
+- dev or 기본 폴더
+
+환경 변수
+- 여러 버전의 JDK 존재 > 딱 1버전만 대표 JDK(기본값) 설정 > JAVA_HOME 환경 변수
+
+사용 도구 > https://spring.io
+- STS3
+- STS4
+
+워크스페이스
+- C:\class\code\springboot
+
+
+
+Spring Boot 프로젝트 만드는 방법
+1. 개발 툴 STS4(Spring Initializr)
+2. Spring Initializr
+
+
+
+
+새프로젝트
+- "boot-begin"
+- 의존성 추가
+	- Spring Web
+
+
+스프링 부트 애플리케이션	
+- com.test.begin > BootBeginApplication.java
+                 > 프로젝트명 + Application
+
+여러가지 자원
+- src/main/resources
+	- static
+		- 정적 자원들(HTML, CSS, JavaScript, 이미지 등..)
+		- http://localhost:8090/hello.html
+	- templates
+		- 이전의 views 폴더 역할
+		- JSP 같은 뷰 페이지를 담는 역할
+	- application.properties
+		- 스프링 설정 + 자바 설정
+		- application.properties
+		- application.yaml or application.yml
+
+- src/test/java
+	- 기존의 단위 테스트와 동일
+	- @SpringBootTest
+	
+- build.gradle
+	- Gradle 빌드 도구 설정 파일
+	- pom.xml와 유사한 역할
+
+샘플 파일
+- "com.test.bootbegin.controller" > "TestController.java"
+	
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+[이번 프로젝트 설명]
+1. boot-begin
+2. boot-jsp > 추천(X)
+3. boot-mybatis 
+---------------------------------------
+4. > 2. boot-thymeleaf
+5. > 3. boot-jpa
+6. spring boot security
+
+Spring Boot + JSP
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+프로젝트 생성
+- Name: "boot-jsp" ***
+- Type: Gradle(Groovy)
+- Packaging: Jar
+- Java Version: 21
+- Language: Java
+- Group: "com.test"
+- Artifactg: "boot-jsp"
+- Package: "com.test.jsp" ***
+- Dependency: 
+	- Lombok
+	- Spring Web
+- Finish 
+
+[JSP 설정하기]
+- build.gradle > class 다운로드 가서 가져오기, dependencies에 작성
+//JSP
+implementation 'org.apache.tomcat.embed:tomcat-embed-jasper'
+implementation 'jakarta.servlet:jakarta.servlet-api'
+implementation 'jakarta.servlet.jsp.jstl:jakarta.servlet.jsp.jstl-api'
+implementation 'org.glassfish.web:jakarta.servlet.jsp.jstl'
+
+//Lombok 테스트 환경
+testImplementation 'org.projectlombok:lombok'
+testAnnotationProcessor 'org.projectlombok:lombok'
+
+- build.gradle
+	- 의존성 정의
+		a. comileOnly > 컴파일시에만 사용. 빌드 시 jar에 포함하지 말것. > 실행 파일 용량 줄이기
+		b. runtimeOnly > 런타임시에만 사용. 컴파일 때는 사용 안함. 코드 작성 시 참조 불가능
+		c. annotationProcessor > 어노테이션 프로세서에서 사용하는 라이브러리
+		d. implementation > 컴파일 + 런타임 때 사용
+		e. testComileOnly > 테스트 코드 컴파일 때만 사용
+		f. testRuntimeOnly > 테스트 코드 런타임 때만 사용
+		g. testImplementation > 테스트 코드 컴파일 + 런타임 사용
+		h. developmentOnly > 개발할 때만 사용 + 배포 시 제외
+
+- application.yml
+	- JSP 설정 추가
+
+- 파일 생성
+	- "com.test.jsp.controller" > "TestController.java"
+	- "com.test.jsp.dto" > "TestDTO.java"
+	- src/main/webapp/WEB-INF/views > "test.jsp"
+	- static > "test.html"
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+- 기존 방식(Servlet/JSP, Spring)
+- 외부 톰캣을 사용 
+- 
+
+- 현재 방식(Spring Boot)
+- 내부 톰캣을 사용 
+- Spring DevTools 의존성 사용 > Hot Deployment 유사 동작
+
+- http://localhost:8090/test.do?name=홍길동&age=20
+- http://localhost:8090/test.html
+
+Spring DevTools 미사용
+1. Java 코드 변경
+	- 자동 반영 안됨(기다려도 안됨)
+	- 부트 애플리케이션을 재시작(대시 보드)
+	
+2. JSP 코드 변경
+	- 자동 반영 안됨(기다려도 안됨)
+	- 부트 애플리케이션을 재시작(대시 보드)
+
+3. 정적 자원 코드 변경
+	- 자동 반영
+
+Spring DevTools 사용 > https://start.spring.io/ 참고
+1. Java 코드 변경
+	- 자동 반영 > 콘솔 창에 ConditionEvaluationDeltaLoggingListener 이 출력된 것을 확인할 수 있음
+	
+2. JSP 코드 변경
+	- 자동 반영
+
+3. 정적 자원 코드 변경
+	- 자동 반영
+
+
+
+[스프링 부트, Spring Boot]
+- 스프링 부트는 자바 기반의 웹 애플리케이션과 마이크로서비스를 빠르고 쉽게 개발할 수 있는 프레임워크이다.
+
+스프링 부트 특징
+1. 자동 구성(Auto Configuration): 프로젝트에 필요한 의존성 or 설정을 자동으로 구성한다.
+2. 독립 실행형 애플리케이션: 내장 서버를 포함해서 별도의 외부 환경 설치없이 실행 가능
+3. 스프링 스타터: 미리 구성된 의존성 세트로 제공
+
+4. 복잡한 XML 설정 불필요
+	- application.yml
+	- 기존.xml > Java 설정으로 교체
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~	
+[나의 깨알 필기]
+스프링 설정 방식
+1. XML 방식
+------------------
+2. 어노테이션 방식
+3. 자바방식
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+5. 보일러플레이트 코드 최소화
+* 최소한의 변경으로 여러곳에서 재사용되며, 반복적으로 비슷한 형태를 띄는 코드
+6. 내장 서버 지원 > Tomcat, Jetty, Undertow 등 > 제우스
+
+
+
+서버 아키텍처의 종류
+1. 모놀리식 아키텍처(monolithic)
+	- 하나의 애플리케이션으로 모든 기능을 개발
+	- 초기 개발 빠름
+	- 배포가 쉽다.
+	- 유지 보수가 힘들가.
+	- 기능 변화에 대응 힘듦
+	- 기술 스택 선택의 자유도가 낮다.
+	- 부분 장애 > 전체 장애
+
+2. 마이크로서비스 아키텍처(MSA)
+	- 작은 독립적인 서비스를 각각 구현한 뒤 서로 API를 통해서 통신하도록 구성
+	- 초기 개발 비용 필요
+	- 배포가 힘들다.
+	- 유지 보수가 쉽다.
+	- 기능 변화에 유연
+	- 기술 스택 선택의 자유도가 높다.
+	- 부분 장애 > 여파 적음	
+
+
+[Spring Boot + Mybatis]
+
+프로젝트 생성
+- Name: "boot-mybatis" ***
+- Type: Gradle(Groovy)
+- Packaging: Jar
+- Java Version: 21
+- Language: Java
+- Group: "com.test"
+- Artifactg: "boot-mybatis" ***
+- Package: "com.test.mybatis" ***
+- Dependency: 
+- Dependencies:
+	- Spring Web
+	- Lombok
+	- Spring DevTools
+	- Oracle Driver(JDBC)
+	- MyBatis Framework
+- Finish
+
+
+JSP 설정
+- build gradle
+	- 의존성 추가
+	
+
+JDBC 설정
+- application.yml
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

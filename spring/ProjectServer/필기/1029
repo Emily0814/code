@@ -51,6 +51,14 @@ AjaxServer + Swagger 구축
 		
 5. 도움말 작성
 
+============================================
+
+ProjectServer
+- "com.test.project.controller" > "MainController.java"
+- views > "main.jsp"
+
+
+
 		
 		
 		
