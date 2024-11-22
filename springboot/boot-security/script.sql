@@ -11,3 +11,5 @@ create sequence seqMember;
 
 select * from member;
 
+select * from tabs;
+
