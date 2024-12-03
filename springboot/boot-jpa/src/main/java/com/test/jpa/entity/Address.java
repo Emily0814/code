@@ -94,16 +94,15 @@ public class Address {
 	//주소 수정 Setter
 	public void updateAddress(String address) {
 		this.address = address;
-	};
-	
-
-//	@OneToOne
-//	@JoinColumn(name = "seq")
-//	private Info info;
-	
-	@OneToMany
-	@JoinColumn(name = "aseq")
-	private List<Memo> memo;
+	}
+	    
+    @OneToOne(mappedBy = "address")
+    private Info info;
+    
+    // Memo 관련 매핑
+//    @OneToMany
+//    @JoinColumn(name = "aseq")
+//    private List<Memo> memo;
 	
 	
 }//Address

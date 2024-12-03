@@ -124,7 +124,6 @@ testAnnotationProcessor 'org.projectlombok:lombok'
 
 - 기존 방식(Servlet/JSP, Spring)
 - 외부 톰캣을 사용 
-- 
 
 - 현재 방식(Spring Boot)
 - 내부 톰캣을 사용 

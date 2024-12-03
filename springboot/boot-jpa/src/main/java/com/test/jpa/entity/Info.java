@@ -26,9 +26,9 @@ public class Info {
 	private String school;
 	private String country;
 	
-//	@OneToOne
-//	@JoinColumn(name = "seq")
-//	private Address address;
+	@OneToOne
+	@JoinColumn(name = "seq")
+	private Address address;
 	
 }
 
